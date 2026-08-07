@@ -4,3 +4,9 @@ buildCommand = "dotnet restore && dotnet publish -c Release -o output"
 
 [deploy]
 startCommand = "dotnet output/CoDevelopAPI.dll"
+
+[nixpacks]
+providers = ["dotnet"]
+
+[nixpacks.env]
+DOTNET_SDK_VERSION = "8.0"
