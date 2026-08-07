@@ -1,0 +1,581 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\services\\implementations\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\services\\implementations\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\services\\interfaces\\iticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\services\\interfaces\\iticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\models\\dtos\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\models\\dtos\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\services\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\services\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\services\\implementations\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\services\\implementations\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\models\\dtos\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\models\\dtos\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\models\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\models\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\models\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\models\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\services\\implementations\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\services\\implementations\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\services\\helpers\\passwordhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\services\\helpers\\passwordhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\models\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\models\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\services\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\services\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\models\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\models\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\services\\implementations\\rolepermissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\services\\implementations\\rolepermissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\models\\dtos\\rolepermissiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\models\\dtos\\rolepermissiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\controllers\\rolepermissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\controllers\\rolepermissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\services\\interfaces\\irolepermissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\services\\interfaces\\irolepermissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\models\\dtos\\permissiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\models\\dtos\\permissiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\services\\implementations\\permissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\services\\implementations\\permissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\models\\entities\\permission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\models\\entities\\permission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\controllers\\permissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\controllers\\permissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\services\\interfaces\\ipermissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\services\\interfaces\\ipermissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\services\\implementations\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\services\\implementations\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\models\\dtos\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\models\\dtos\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\controllers\\healthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\controllers\\healthcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|c:\\users\\massr\\source\\repos\\codevelopapi\\codevelopapi\\services\\interfaces\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F46BD63-3153-4A49-A778-AFC401B1555F}|CoDevelopAPI\\CoDevelopAPI.csproj|solutionrelative:codevelopapi\\services\\interfaces\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TicketsController.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Controllers\\TicketsController.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Controllers\\TicketsController.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Controllers\\TicketsController.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Controllers\\TicketsController.cs",
+              "ViewState": "AQIAAL8AAAAAAAAAAAAwwN0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T20:05:16.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TicketService.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Implementations\\TicketService.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Services\\Implementations\\TicketService.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Implementations\\TicketService.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Services\\Implementations\\TicketService.cs",
+              "ViewState": "AQIAAK4BAAAAAAAAAAAwwMwBAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T20:04:47.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ITicketService.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Interfaces\\ITicketService.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Services\\Interfaces\\ITicketService.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Interfaces\\ITicketService.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Services\\Interfaces\\ITicketService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T20:04:31.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TicketDto.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Models\\DTOs\\TicketDto.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Models\\DTOs\\TicketDto.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Models\\DTOs\\TicketDto.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Models\\DTOs\\TicketDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T20:03:50.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Implementations\\AuthService.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Services\\Implementations\\AuthService.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Implementations\\AuthService.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Services\\Implementations\\AuthService.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAQwCAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-05T20:41:01.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthDto.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Models\\DTOs\\AuthDto.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Models\\DTOs\\AuthDto.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Models\\DTOs\\AuthDto.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Models\\DTOs\\AuthDto.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-05T20:40:15.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "JwtSettings.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Models\\JwtSettings.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Models\\JwtSettings.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Models\\JwtSettings.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Models\\JwtSettings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-05T20:39:36.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Program.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Program.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Program.cs",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAgwF8AAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T17:43:08.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Services\\Interfaces\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Services\\Interfaces\\IAuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-05T20:40:42.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Implementations\\EmailService.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Services\\Implementations\\EmailService.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Implementations\\EmailService.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Services\\Implementations\\EmailService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAQwBcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-05T19:26:28.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Interfaces\\IEmailService.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Services\\Interfaces\\IEmailService.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Interfaces\\IEmailService.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Services\\Interfaces\\IEmailService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-05T19:26:16.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Models\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Models\\ApiResponse.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Models\\ApiResponse.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Models\\ApiResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-03T20:44:28.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Implementations\\UserService.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Services\\Implementations\\UserService.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Implementations\\UserService.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Services\\Implementations\\UserService.cs",
+              "ViewState": "AQIAAPgAAAAAAAAAAAAQwAMBAABhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-03T21:46:05.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAwwCoAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-05T20:41:27.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PasswordHelper.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Helpers\\PasswordHelper.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Services\\Helpers\\PasswordHelper.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Helpers\\PasswordHelper.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Services\\Helpers\\PasswordHelper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-05T19:34:54.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Models\\DTOs\\UserDto.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Models\\DTOs\\UserDto.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Models\\DTOs\\UserDto.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Models\\DTOs\\UserDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-03T21:44:18.744Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\appsettings.json",
+              "RelativeToolTip": "CoDevelopAPI\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-02T19:03:27.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EmailSettings.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Models\\EmailSettings.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Models\\EmailSettings.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Models\\EmailSettings.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Models\\EmailSettings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-05T19:25:55.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-03T20:53:00.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "RolePermissionService.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Implementations\\RolePermissionService.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Services\\Implementations\\RolePermissionService.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Implementations\\RolePermissionService.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Services\\Implementations\\RolePermissionService.cs",
+              "ViewState": "AQIAAIIAAAAAAAAAAAAwwPQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T20:56:56.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "PermissionService.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Implementations\\PermissionService.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Services\\Implementations\\PermissionService.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Implementations\\PermissionService.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Services\\Implementations\\PermissionService.cs",
+              "ViewState": "AQIAANYAAAAAAAAAAABBwOoAAAB2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T20:33:37.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RolePermissionDto.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Models\\DTOs\\RolePermissionDto.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Models\\DTOs\\RolePermissionDto.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Models\\DTOs\\RolePermissionDto.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Models\\DTOs\\RolePermissionDto.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAgwCEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T20:56:11.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "RolePermissionsController.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Controllers\\RolePermissionsController.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Controllers\\RolePermissionsController.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Controllers\\RolePermissionsController.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Controllers\\RolePermissionsController.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAgwFMAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T20:58:07.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IRolePermissionService.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Interfaces\\IRolePermissionService.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Services\\Interfaces\\IRolePermissionService.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Interfaces\\IRolePermissionService.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Services\\Interfaces\\IRolePermissionService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T20:56:37.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "PermissionDto.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Models\\DTOs\\PermissionDto.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Models\\DTOs\\PermissionDto.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Models\\DTOs\\PermissionDto.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Models\\DTOs\\PermissionDto.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAABBwCUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T21:12:16.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Permission.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Models\\Entities\\Permission.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Models\\Entities\\Permission.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Models\\Entities\\Permission.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Models\\Entities\\Permission.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T20:38:36.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAABBwKUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-03T21:53:49.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "RolesController.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Controllers\\RolesController.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Controllers\\RolesController.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Controllers\\RolesController.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Controllers\\RolesController.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAABRwH8AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-03T20:53:30.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IPermissionService.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Interfaces\\IPermissionService.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Services\\Interfaces\\IPermissionService.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Interfaces\\IPermissionService.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Services\\Interfaces\\IPermissionService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T20:33:05.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "PermissionsController.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Controllers\\PermissionsController.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Controllers\\PermissionsController.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Controllers\\PermissionsController.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Controllers\\PermissionsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T20:36:56.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "HealthController.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Controllers\\HealthController.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Controllers\\HealthController.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Controllers\\HealthController.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Controllers\\HealthController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-02T19:17:10.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "RoleDTO.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Models\\DTOs\\RoleDTO.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Models\\DTOs\\RoleDTO.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Models\\DTOs\\RoleDTO.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Models\\DTOs\\RoleDTO.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAABBwAMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-03T20:42:36.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "RoleService.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Implementations\\RoleService.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Services\\Implementations\\RoleService.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Implementations\\RoleService.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Services\\Implementations\\RoleService.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAABRwBQAAABkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-03T20:46:17.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Services\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Services\\Interfaces\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-03T21:45:30.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "IRoleService.cs",
+              "DocumentMoniker": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Interfaces\\IRoleService.cs",
+              "RelativeDocumentMoniker": "CoDevelopAPI\\Services\\Interfaces\\IRoleService.cs",
+              "ToolTip": "C:\\Users\\massr\\source\\repos\\CoDevelopAPI\\CoDevelopAPI\\Services\\Interfaces\\IRoleService.cs",
+              "RelativeToolTip": "CoDevelopAPI\\Services\\Interfaces\\IRoleService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-03T20:45:24.967Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

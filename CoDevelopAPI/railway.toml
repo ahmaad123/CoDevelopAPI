@@ -1,0 +1,6 @@
+[build]
+builder = "nixpacks"
+buildCommand = "dotnet restore && dotnet publish -c Release -o output"
+
+[deploy]
+startCommand = "dotnet output/CoDevelopAPI.dll"
