@@ -11,10 +11,18 @@ var builder = WebApplication.CreateBuilder(args);
 
 // ========== DATABASE CONNECTION ==========
 var dbUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
-//var connectionString = !string.IsNullOrEmpty(dbUrl)
-//    ? ConvertPostgresUrlToConnectionString(dbUrl)
-//    : builder.Configuration.GetConnectionString("DefaultConnection");
-var connectionString = ConvertPostgresUrlToConnectionString(dbUrl);
+string connectionString;
+
+if (!string.IsNullOrEmpty(dbUrl))
+{
+    connectionString = ConvertPostgresUrlToConnectionString(dbUrl);
+}
+else
+{
+    // Fallback to appsettings.json for local development
+    connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
+        ?? "Host=localhost;Port=5432;Database=CodevelopDB;Username=postgres";
+}
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(connectionString));
