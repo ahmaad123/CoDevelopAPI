@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CoDevelopAPI.Models.Entities;
@@ -13,9 +13,9 @@ public partial class Role
 
     public string? Rolecode { get; set; }
 
-    public bool IsActive { get; set; }
-
     public string? Description { get; set; }
+
+    public bool? IsActive { get; set; }
 
     public virtual ICollection<Rolepermission> Rolepermissions { get; set; } = new List<Rolepermission>();
 
