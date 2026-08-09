@@ -210,7 +210,7 @@ public partial class ApplicationDbContext : DbContext
             entity.Property(e => e.Description)
                 .HasMaxLength(255)
                 .HasColumnName("description");
-            entity.Property(e => e.IsActive).HasColumnName("isActive");
+            entity.Property(e => e.IsActive).HasColumnName("isActive").HasColumnType("boolean");;
             entity.Property(e => e.Level)
                 .HasDefaultValue(0)
                 .HasColumnName("level");
