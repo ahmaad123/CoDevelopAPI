@@ -9,7 +9,16 @@ using CoDevelopAPI.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container
+// ========== DATABASE CONNECTION ==========
+var dbUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
+var connectionString = !string.IsNullOrEmpty(dbUrl)
+    ? ConvertPostgresUrlToConnectionString(dbUrl)
+    : builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(connectionString));
+
+// ========== CONTROLLERS & JSON ==========
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
@@ -17,6 +26,7 @@ builder.Services.AddControllers()
         options.JsonSerializerOptions.DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull;
     });
 
+// ========== SWAGGER ==========
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -27,7 +37,6 @@ builder.Services.AddSwaggerGen(c =>
         Description = "API for CoDevelop System Management"
     });
 
-    // Add JWT Authentication to Swagger
     c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
     {
         Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
@@ -36,7 +45,6 @@ builder.Services.AddSwaggerGen(c =>
         Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey,
         Scheme = "Bearer"
     });
-
     c.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
     {
         {
@@ -53,15 +61,10 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-// Add DbContext
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-// Add JWT Configuration
+// ========== JWT AUTH ==========
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
 builder.Services.Configure<JwtSettings>(jwtSettings);
-
-var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]);
+var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]!);
 
 builder.Services.AddAuthentication(options =>
 {
@@ -79,18 +82,14 @@ builder.Services.AddAuthentication(options =>
         ValidIssuer = jwtSettings["Issuer"],
         ValidAudience = jwtSettings["Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(key),
-        ClockSkew = TimeSpan.Zero // Token expires exactly at expiration time
+        ClockSkew = TimeSpan.Zero
     };
 });
-var dbUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
-var connectionString = !string.IsNullOrEmpty(dbUrl)
-    ? ConvertPostgresUrlToConnectionString(dbUrl)
-    : builder.Configuration.GetConnectionString("DefaultConnection");
 
-// Add Email Configuration
+// ========== EMAIL ==========
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 
-// Register Services
+// ========== SERVICES ==========
 builder.Services.AddScoped<IRoleService, RoleService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IPermissionService, PermissionService>();
@@ -98,11 +97,8 @@ builder.Services.AddScoped<IRolePermissionService, RolePermissionService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITicketService, TicketService>();
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseNpgsql(connectionString));
 
-
-// Add CORS for React frontend
+// ========== CORS ==========
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp",
@@ -116,38 +112,33 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline
-if (app.Environment.IsDevelopment())
+// ========== SWAGGER (ALWAYS ON) ==========
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "CoDevelop API V1");
-        c.RoutePrefix = "swagger";
-    });
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "CoDevelop API V1");
+    c.RoutePrefix = "swagger";
+});
 
-app.UseHttpsRedirection();
+// REMOVED app.UseHttpsRedirection(); – Railway handles HTTPS
+
 app.UseCors("AllowReactApp");
-
-// IMPORTANT: Authentication before Authorization
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
 
+// ========== AUTO-MIGRATION ==========
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
     try
     {
         await dbContext.Database.EnsureCreatedAsync();
-        Console.WriteLine("Database tables created successfully!");
+        Console.WriteLine("✅ Database tables ensured.");
     }
     catch (Exception ex)
     {
-        var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
-        logger.LogError(ex, "An error occurred while creating the database.");
+        Console.WriteLine($"❌ Database migration error: {ex.Message}");
     }
 }
 
