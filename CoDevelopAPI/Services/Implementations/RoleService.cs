@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using CoDevelopAPI.Data;
 using CoDevelopAPI.Models;
 using CoDevelopAPI.Models.DTOs;
