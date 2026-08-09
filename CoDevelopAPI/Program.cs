@@ -11,9 +11,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // ========== DATABASE CONNECTION ==========
 var dbUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
-var connectionString = !string.IsNullOrEmpty(dbUrl)
-    ? ConvertPostgresUrlToConnectionString(dbUrl)
-    : builder.Configuration.GetConnectionString("DefaultConnection");
+//var connectionString = !string.IsNullOrEmpty(dbUrl)
+//    ? ConvertPostgresUrlToConnectionString(dbUrl)
+//    : builder.Configuration.GetConnectionString("DefaultConnection");
+var connectionString = ConvertPostgresUrlToConnectionString(dbUrl);
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(connectionString));
