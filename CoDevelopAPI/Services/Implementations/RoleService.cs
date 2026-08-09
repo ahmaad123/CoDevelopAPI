@@ -38,7 +38,7 @@ namespace CoDevelopAPI.Services.Implementations
                     Rolename = createRoleDto.RoleName,
                     Level = createRoleDto.Level,
                     Rolecode = createRoleDto.RoleCode,
-                    IsActive = createRoleDto.IsActive ?? 1,
+                    IsActive = createRoleDto.IsActive,
                     Description = createRoleDto.Description
                 };
 
