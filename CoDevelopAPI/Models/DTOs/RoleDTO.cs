@@ -15,7 +15,7 @@ namespace CoDevelopAPI.Models.DTOs
         //[MaxLength(100)]
         public string? RoleCode { get; set; }
 
-        public bool? IsActive { get; set; }
+        public bool IsActive { get; set; }
 
         //[MaxLength(255)]
         public string? Description { get; set; }
@@ -28,7 +28,7 @@ namespace CoDevelopAPI.Models.DTOs
         public string? ParentRoleName { get; set; }
         public int Level { get; set; }
         public string? RoleCode { get; set; }
-        public bool? IsActive { get; set; }
+        public bool IsActive { get; set; }
         public string? Description { get; set; }
         public DateTime? Created { get; set; }
         public int ChildRolesCount { get; set; }
@@ -46,7 +46,7 @@ namespace CoDevelopAPI.Models.DTOs
         //[MaxLength(100)]
         public string? RoleCode { get; set; }
 
-        public bool? IsActive { get; set; }
+        public bool IsActive { get; set; }
 
         //[MaxLength(255)]
         public string? Description { get; set; }
