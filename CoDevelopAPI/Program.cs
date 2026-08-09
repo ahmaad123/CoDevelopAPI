@@ -9,20 +9,10 @@ using CoDevelopAPI.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ========== DATABASE CONNECTION ==========
 var dbUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
-string connectionString;
-
-if (!string.IsNullOrEmpty(dbUrl))
-{
-    connectionString = ConvertPostgresUrlToConnectionString(dbUrl);
-}
-else
-{
-    // Fallback to appsettings.json for local development
-    connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
-        ?? "Host=localhost;Port=5432;Database=CodevelopDB;Username=postgres";
-}
+var connectionString = !string.IsNullOrEmpty(dbUrl)
+    ? ConvertPostgresUrlToConnectionString(dbUrl)
+    : builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(connectionString));
