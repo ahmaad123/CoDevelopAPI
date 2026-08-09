@@ -15,7 +15,7 @@ namespace CoDevelopAPI.Models.DTOs
         //[MaxLength(100)]
         public string? RoleCode { get; set; }
 
-        public bool? IsActive { get; set; } = 1;
+        public bool? IsActive { get; set; }
 
         //[MaxLength(255)]
         public string? Description { get; set; }
