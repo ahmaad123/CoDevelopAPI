@@ -13,7 +13,7 @@ public partial class Role
 
     public string? Rolecode { get; set; }
 
-    public int? IsActive { get; set; }
+    public bool IsActive { get; set; }
 
     public string? Description { get; set; }
 
