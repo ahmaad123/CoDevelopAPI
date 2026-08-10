@@ -89,11 +89,11 @@ namespace CoDevelopAPI.Services.Implementations
                         $"{user.Firstname} {user.Lastname}",
                         generatedPassword);
 
-                    _logger.LogInformation($"Password email sent to {user.Email}");
+                    _logger.LogInformation($"Password {generatedPassword} sent to {user.Email}");
                 }
                 catch (Exception emailEx)
                 {
-                    _logger.LogWarning(emailEx, $"Failed to send password email to {user.Email}. User created but email not sent.");
+                    _logger.LogWarning(emailEx, $"Failed to send password {generatedPassword} to {user.Email}. User created but email not sent.");
                 }
 
                 var userResponse = MapToUserResponseDto(user);
