@@ -9,6 +9,7 @@ using CoDevelopAPI.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// ========== DATABASE CONNECTION ==========
 var dbUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
 var connectionString = !string.IsNullOrEmpty(dbUrl)
     ? ConvertPostgresUrlToConnectionString(dbUrl)
@@ -120,12 +121,13 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = "swagger";
 });
 
-// REMOVED app.UseHttpsRedirection(); – Railway handles HTTPS
-
 app.UseCors("AllowReactApp");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+
+// ========== SIMPLE TEST ENDPOINT ==========
+app.MapGet("/", () => "CoDevelop API is running!");
 
 // ========== AUTO-MIGRATION ==========
 using (var scope = app.Services.CreateScope())
@@ -144,6 +146,7 @@ using (var scope = app.Services.CreateScope())
 
 app.Run();
 
+// ========== HELPER ==========
 static string ConvertPostgresUrlToConnectionString(string url)
 {
     var uri = new Uri(url);
