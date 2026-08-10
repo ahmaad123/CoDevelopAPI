@@ -1,4 +1,4 @@
-﻿using MailKit.Net.Smtp;
+using MailKit.Net.Smtp;
 using MailKit.Security;
 using MimeKit;
 using Microsoft.Extensions.Options;
@@ -37,15 +37,21 @@ namespace CoDevelopAPI.Services.Implementations
 
                 using var smtp = new SmtpClient();
 
-                // Accept all SSL certificates to avoid validation issues
+                // Accept all SSL certificates
                 smtp.ServerCertificateValidationCallback = (s, c, h, e) => true;
-                smtp.Timeout = 10000;
+                smtp.Timeout = 30000; // Increased to 30 seconds
 
-                // Gmail requires STARTTLS on port 587
-                await smtp.ConnectAsync(
-                    "smtp.gmail.com",
-                    587,
-                    SecureSocketOptions.StartTls);
+                try
+                {
+                    // Try STARTTLS on port 587
+                    await smtp.ConnectAsync("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogWarning(ex, "Failed to connect on port 587, trying SSL on port 465");
+                    // Fallback to SSL on port 465
+                    await smtp.ConnectAsync("smtp.gmail.com", 465, SecureSocketOptions.SslOnConnect);
+                }
 
                 // Authenticate with Gmail
                 await smtp.AuthenticateAsync(
@@ -60,7 +66,7 @@ namespace CoDevelopAPI.Services.Implementations
             }
             catch (AuthenticationException ex)
             {
-                _logger.LogError(ex, "Gmail authentication failed. Make sure you're using an App Password, not your regular password.");
+                _logger.LogError(ex, "Gmail authentication failed. Ensure you're using an App Password.");
                 throw new Exception("Gmail authentication failed. Use an App Password from Google Account settings.", ex);
             }
             catch (Exception ex)
@@ -69,7 +75,6 @@ namespace CoDevelopAPI.Services.Implementations
                 throw;
             }
         }
-
         public async Task<bool> SendPasswordEmailAsync(string toEmail, string userName, string password)
         {
             var subject = "Your CoDevelop Account Password";
