@@ -38,6 +38,10 @@ public partial class ApplicationDbContext : DbContext
 
     public virtual DbSet<Userrole> Userroles { get; set; }
 
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseNpgsql("Host=localhost;Database=postgres;Username=postgres;Password=postgres");
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.HasPostgresExtension("pg_catalog", "adminpack");
@@ -68,12 +72,18 @@ public partial class ApplicationDbContext : DbContext
             entity.HasIndex(e => e.Mobile, "clients_mobile_key").IsUnique();
 
             entity.Property(e => e.Clientid).HasColumnName("clientid");
+            entity.Property(e => e.Address)
+                .HasMaxLength(255)
+                .HasColumnName("address");
             entity.Property(e => e.Businessname)
                 .HasMaxLength(150)
                 .HasColumnName("businessname");
             entity.Property(e => e.Businesstype)
                 .HasMaxLength(50)
                 .HasColumnName("businesstype");
+            entity.Property(e => e.City)
+                .HasMaxLength(100)
+                .HasColumnName("city");
             entity.Property(e => e.Email)
                 .HasMaxLength(100)
                 .HasColumnName("email");
@@ -210,7 +220,7 @@ public partial class ApplicationDbContext : DbContext
             entity.Property(e => e.Description)
                 .HasMaxLength(255)
                 .HasColumnName("description");
-            entity.Property(e => e.IsActive).HasColumnName("isActive").HasColumnType("boolean");;
+            entity.Property(e => e.IsActive).HasColumnName("isActive");
             entity.Property(e => e.Level)
                 .HasDefaultValue(0)
                 .HasColumnName("level");
