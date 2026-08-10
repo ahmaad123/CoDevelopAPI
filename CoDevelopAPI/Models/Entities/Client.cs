@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CoDevelopAPI.Models.Entities;
@@ -22,6 +22,10 @@ public partial class Client
     public decimal Monthlyprice { get; set; }
 
     public string Status { get; set; } = null!;
+
+    public string? City { get; set; }
+
+    public string? Address { get; set; }
 
     public virtual ICollection<Invoice> Invoices { get; set; } = new List<Invoice>();
 
