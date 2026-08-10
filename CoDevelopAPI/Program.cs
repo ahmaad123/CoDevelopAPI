@@ -96,6 +96,7 @@ builder.Services.AddScoped<IRolePermissionService, RolePermissionService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITicketService, TicketService>();
+builder.Services.AddScoped<IClientService, ClientService>();
 
 // ========== CORS ==========
 builder.Services.AddCors(options =>
