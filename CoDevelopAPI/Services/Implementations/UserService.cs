@@ -82,25 +82,25 @@ namespace CoDevelopAPI.Services.Implementations
 
                 await _context.Entry(user).Reference(u => u.Role).LoadAsync();
 
-                try
-                {
-                    await _emailService.SendPasswordEmailAsync(
-                        user.Email,
-                        $"{user.Firstname} {user.Lastname}",
-                        generatedPassword);
-
-                    _logger.LogInformation($"Password {generatedPassword} sent to {user.Email}");
-                }
-                catch (Exception emailEx)
-                {
-                    _logger.LogWarning(emailEx, $"Failed to send password {generatedPassword} to {user.Email}. User created but email not sent.");
-                }
+                //try
+                //{
+                //    await _emailService.SendPasswordEmailAsync(
+                //        user.Email,
+                //        $"{user.Firstname} {user.Lastname}",
+                //        generatedPassword);
+                //
+                //    _logger.LogInformation($"Password {generatedPassword} sent to {user.Email}");
+                //}
+                //catch (Exception emailEx)
+                //{
+                //    _logger.LogWarning(emailEx, $"Failed to send password {generatedPassword} to {user.Email}. User created but email not sent.");
+                //}
 
                 var userResponse = MapToUserResponseDto(user);
 
                 _logger.LogInformation($"User created successfully: {user.Email} (ID: {user.Userid})");
                 return ApiResponse<UserResponseDto>.SuccessResponse(
-                    userResponse, "User created successfully. Password has been sent to their email.", 201);
+                    userResponse, "User created successfully.", 201);
             }
             catch (Exception ex)
             {
