@@ -28,15 +28,23 @@ public partial class ApplicationDbContext : DbContext
 
     public virtual DbSet<Project> Projects { get; set; }
 
+    public virtual DbSet<Projectassignee> Projectassignees { get; set; }
+
     public virtual DbSet<Role> Roles { get; set; }
 
     public virtual DbSet<Rolepermission> Rolepermissions { get; set; }
+
+    public virtual DbSet<Models.Entities.Task> Tasks { get; set; }
 
     public virtual DbSet<Ticket> Tickets { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
 
     public virtual DbSet<Userrole> Userroles { get; set; }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseNpgsql("Host=localhost;Database=postgres;Username=postgres;Password=postgres");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -187,7 +195,11 @@ public partial class ApplicationDbContext : DbContext
                 .HasPrecision(18, 2)
                 .HasColumnName("budget");
             entity.Property(e => e.Clientid).HasColumnName("clientid");
-            entity.Property(e => e.Deadline).HasColumnName("deadline");
+            entity.Property(e => e.Createdby).HasColumnName("createdby");
+            entity.Property(e => e.Deadline)
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("deadline");
+            entity.Property(e => e.Description).HasColumnName("description");
             entity.Property(e => e.Developer)
                 .HasMaxLength(100)
                 .HasColumnName("developer");
@@ -198,10 +210,61 @@ public partial class ApplicationDbContext : DbContext
             entity.Property(e => e.Projectname)
                 .HasMaxLength(150)
                 .HasColumnName("projectname");
+            entity.Property(e => e.Status)
+                .HasMaxLength(20)
+                .HasDefaultValueSql("'Active'::character varying")
+                .HasColumnName("status");
 
             entity.HasOne(d => d.Client).WithMany(p => p.Projects)
                 .HasForeignKey(d => d.Clientid)
                 .HasConstraintName("projects_clientid_fkey");
+
+            entity.HasOne(d => d.CreatedbyNavigation).WithMany(p => p.Projects)
+                .HasForeignKey(d => d.Createdby)
+                .OnDelete(DeleteBehavior.SetNull)
+                .HasConstraintName("projects_createdby_fkey");
+        });
+        modelBuilder.Entity<Project>()
+            .Property(p => p.Deadline)
+            .HasColumnType("timestamp without time zone");
+
+        modelBuilder.Entity<Models.Entities.Task>()
+            .Property(t => t.Startdatetime)
+            .HasColumnType("timestamp without time zone");
+
+        modelBuilder.Entity<Models.Entities.Task>()
+            .Property(t => t.Enddatetime)
+            .HasColumnType("timestamp without time zone");
+
+        modelBuilder.Entity<Projectassignee>(entity =>
+        {
+            entity.HasKey(e => e.Projectassigneeid).HasName("projectassignees_pkey");
+
+            entity.ToTable("projectassignees");
+
+            entity.HasIndex(e => new { e.Projectid, e.Userid }, "unique_project_user").IsUnique();
+
+            entity.Property(e => e.Projectassigneeid).HasColumnName("projectassigneeid");
+            entity.Property(e => e.Assignedby).HasColumnName("assignedby");
+            entity.Property(e => e.Assigneddate)
+                .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("assigneddate");
+            entity.Property(e => e.Projectid).HasColumnName("projectid");
+            entity.Property(e => e.Userid).HasColumnName("userid");
+
+            entity.HasOne(d => d.AssignedbyNavigation).WithMany(p => p.ProjectassigneeAssignedbyNavigations)
+                .HasForeignKey(d => d.Assignedby)
+                .OnDelete(DeleteBehavior.SetNull)
+                .HasConstraintName("projectassignees_assignedby_fkey");
+
+            entity.HasOne(d => d.Project).WithMany(p => p.Projectassignees)
+                .HasForeignKey(d => d.Projectid)
+                .HasConstraintName("projectassignees_projectid_fkey");
+
+            entity.HasOne(d => d.User).WithMany(p => p.ProjectassigneeUsers)
+                .HasForeignKey(d => d.Userid)
+                .HasConstraintName("projectassignees_userid_fkey");
         });
 
         modelBuilder.Entity<Role>(entity =>
@@ -256,6 +319,49 @@ public partial class ApplicationDbContext : DbContext
             entity.HasOne(d => d.Role).WithMany(p => p.Rolepermissions)
                 .HasForeignKey(d => d.Roleid)
                 .HasConstraintName("rolepermissions_roleid_fkey");
+        });
+
+        modelBuilder.Entity<Models.Entities.Task>(entity =>
+        {
+            entity.HasKey(e => e.Taskid).HasName("tasks_pkey");
+
+            entity.ToTable("tasks");
+
+            entity.Property(e => e.Taskid).HasColumnName("taskid");
+            entity.Property(e => e.Assignedby).HasColumnName("assignedby");
+            entity.Property(e => e.Assignedto).HasColumnName("assignedto");
+            entity.Property(e => e.Createddate)
+                .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("createddate");
+            entity.Property(e => e.Enddatetime)
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("enddatetime");
+            entity.Property(e => e.Projectid).HasColumnName("projectid");
+            entity.Property(e => e.Startdatetime)
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("startdatetime");
+            entity.Property(e => e.Status)
+                .HasMaxLength(20)
+                .HasDefaultValueSql("'Pending'::character varying")
+                .HasColumnName("status");
+            entity.Property(e => e.Taskname)
+                .HasMaxLength(255)
+                .HasColumnName("taskname");
+
+            entity.HasOne(d => d.AssignedbyNavigation).WithMany(p => p.TaskAssignedbyNavigations)
+                .HasForeignKey(d => d.Assignedby)
+                .OnDelete(DeleteBehavior.SetNull)
+                .HasConstraintName("tasks_assignedby_fkey");
+
+            entity.HasOne(d => d.AssignedtoNavigation).WithMany(p => p.TaskAssignedtoNavigations)
+                .HasForeignKey(d => d.Assignedto)
+                .OnDelete(DeleteBehavior.SetNull)
+                .HasConstraintName("tasks_assignedto_fkey");
+
+            entity.HasOne(d => d.Project).WithMany(p => p.Tasks)
+                .HasForeignKey(d => d.Projectid)
+                .HasConstraintName("tasks_projectid_fkey");
         });
 
         modelBuilder.Entity<Ticket>(entity =>
