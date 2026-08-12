@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CoDevelopAPI.Models.Entities;
@@ -23,9 +23,19 @@ public partial class User
 
     public string Passwordhash { get; set; } = null!;
 
+    public virtual ICollection<Projectassignee> ProjectassigneeAssignedbyNavigations { get; set; } = new List<Projectassignee>();
+
+    public virtual ICollection<Projectassignee> ProjectassigneeUsers { get; set; } = new List<Projectassignee>();
+
+    public virtual ICollection<Project> Projects { get; set; } = new List<Project>();
+
     public virtual Role? Role { get; set; }
 
     public virtual ICollection<Rolepermission> Rolepermissions { get; set; } = new List<Rolepermission>();
+
+    public virtual ICollection<Task> TaskAssignedbyNavigations { get; set; } = new List<Task>();
+
+    public virtual ICollection<Task> TaskAssignedtoNavigations { get; set; } = new List<Task>();
 
     public virtual ICollection<Ticket> TicketAssignees { get; set; } = new List<Ticket>();
 
