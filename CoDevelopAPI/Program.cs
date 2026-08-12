@@ -17,6 +17,7 @@ var connectionString = !string.IsNullOrEmpty(dbUrl)
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(connectionString));
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 // ========== CONTROLLERS & JSON ==========
 builder.Services.AddControllers()
@@ -98,6 +99,8 @@ builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITicketService, TicketService>();
 builder.Services.AddScoped<IClientService, ClientService>();
+builder.Services.AddScoped<IProjectService, ProjectService>();
+builder.Services.AddScoped<ITaskService, TaskService>();
 
 // ========== CORS ==========
 builder.Services.AddCors(options =>
@@ -136,11 +139,11 @@ using (var scope = app.Services.CreateScope())
     try
     {
         await dbContext.Database.EnsureCreatedAsync();
-        Console.WriteLine("✅ Database tables ensured.");
+        Console.WriteLine("? Database tables ensured.");
     }
     catch (Exception ex)
     {
-        Console.WriteLine($"❌ Database migration error: {ex.Message}");
+        Console.WriteLine($"? Database migration error: {ex.Message}");
     }
 }
 
