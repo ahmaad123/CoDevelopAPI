@@ -39,7 +39,7 @@ namespace CoDevelopAPI.Services.Implementations
 
                 // Accept all SSL certificates
                 smtp.ServerCertificateValidationCallback = (s, c, h, e) => true;
-                smtp.Timeout = 30000; // Increased to 30 seconds
+                //smtp.Timeout = 30000; 
 
                 try
                 {
